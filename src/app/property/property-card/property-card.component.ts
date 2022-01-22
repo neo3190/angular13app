@@ -1,12 +1,15 @@
-import { Template } from "@angular/compiler/src/render3/r3_ast";
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
-@Component({
-  selector:'app-property-card',
-  template:'<h1>I am property card</h1>'
-}
+@Component(
+  {
+    selector:'app-property-card',
+    //template:'<h1>i am a card</h1>',
+    templateUrl:'property-card.component.html',
+    //styles:['h1{font-style:italic;}']
+    styleUrls:['property-card.component.css']
+  }
 )
-export class PropertCardComponent
+export class PropertyCardComponent
 {
-
+@Input() Property:any
 }
